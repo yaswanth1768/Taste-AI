@@ -14,10 +14,8 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7  # 7 days
 
     # Database
-    DATABASE_URL: str = os.getenv(
-        "DATABASE_URL",
-        f"sqlite:///{os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'tasteai.db')}"
-    )
+    _default_db = "/tmp/tasteai.db" if os.getenv("VERCEL") else os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "tasteai.db")
+    DATABASE_URL: str = os.getenv("DATABASE_URL", f"sqlite:///{_default_db}")
 
     # External APIs
     TMDB_API_KEY: str = os.getenv("TMDB_API_KEY", "")
