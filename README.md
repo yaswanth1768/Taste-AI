@@ -1,16 +1,17 @@
 # 🎬 TasteAI: AI-Powered Personalized Movie & Music Recommendation System
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel%20Deployment-black?style=for-the-badge&logo=vercel)](https://frontend-yaswanth1768.vercel.app/)
 [![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.14-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/React-18+-61DAFB.svg)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-5.0+-646CFF.svg)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4+-38B2AC.svg)](https://tailwindcss.com/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.5+-F7931E.svg)](https://scikit-learn.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-336791.svg)](https://www.postgresql.org/)
-[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> **Production-grade AI/ML Full-Stack Entertainment Recommendation Platform** combining Natural Language Processing (NLP), Digital Signal Processing (DSP) Audio Feature Engineering, 5-Factor Hybrid Personalization, Emotion/Mood Curation, and Cross-Domain (Movie $\longleftrightarrow$ Music) Intelligence.
+> 🌐 **Live Web Application**: [https://frontend-yaswanth1768.vercel.app/](https://frontend-yaswanth1768.vercel.app/)
+> 
+> **Production-grade AI/ML Full-Stack Entertainment Recommendation Platform** combining Natural Language Processing (NLP), Digital Signal Processing (DSP) Audio Feature Engineering, 5-Factor Hybrid Personalization, Emotion/Mood Curation, OTT Streaming Availability, and Cross-Domain (Movie $\longleftrightarrow$ Music) Intelligence.
 >
 > Suitable for **Final-Year B.Tech CSE / AIML Capstone Project, Placement Demonstrations, Resumes, and GitHub Portfolios**.
 
@@ -163,13 +164,17 @@ Evaluated across top-$K$ recommendation lists with 50 random test queries:
 
 ---
 
-## 🚀 Getting Started (Quick Start)
+## 🚀 Getting Started & Deployment
+
+### 🌐 Live Production Deployment
+- **Live Web App**: [https://frontend-yaswanth1768.vercel.app/](https://frontend-yaswanth1768.vercel.app/)
+- **GitHub Repository**: [https://github.com/yaswanth1768/Taste-AI](https://github.com/yaswanth1768/Taste-AI)
 
 ### Option 1: Turnkey One-Command Setup (Recommended)
 ```bash
 # 1. Clone repository
-git clone https://github.com/yourusername/taste-ai.git
-cd taste-ai
+git clone https://github.com/yaswanth1768/Taste-AI.git
+cd Taste-AI
 
 # 2. Run master setup script (Downloads data, trains ML models, and initializes DB)
 py scripts/setup.py
