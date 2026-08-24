@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: tasteai_db
+    environment:
+      POSTGRES_USER: tasteai
+      POSTGRES_PASSWORD: tasteaipassword
+      POSTGRES_DB: tasteaidb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: tasteai_backend
+    environment:
+      - DATABASE_URL=postgresql://tasteai:tasteaipassword@postgres:5432/tasteaidb
+      - SECRET_KEY=tasteai_super_secret_jwt_key_for_production_and_demo
+      - ACCESS_TOKEN_EXPIRE_MINUTES=1440
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: tasteai_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  pgdata:
